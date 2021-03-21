@@ -75,14 +75,11 @@ public class MightWeBeFriends {
         System.out.println("3. Winter");
         System.out.println("4. Summer");
         System.out.println();
+
         //Scan for user input and store in response variable
         RESPONSE_SEASON = responseScanner.next();
 
         //Check user input and check if user should be awarded points
-        // Award the user 10 points and add response
-        // Award the user 5 points and add response
-        // add response
-        // Award the user 5 points and add response
         switch (RESPONSE_SEASON) {
 //Fall
             case "1" -> {
