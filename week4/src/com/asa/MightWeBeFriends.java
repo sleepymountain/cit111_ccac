@@ -8,6 +8,7 @@ public class MightWeBeFriends {
     static int RESPONSE_MUSIC_LISTENING;
     static int RESPONSE_MUSIC_CREATION;
     static int RESPONSE_SOCCER;
+    static String RESPONSE_SEASON;
 
     // Create scanner for user input
     static Scanner responseScanner = new Scanner(System.in);
@@ -67,6 +68,51 @@ public class MightWeBeFriends {
             System.out.println();
         }
 
+        //Ask the question
+        System.out.println("[Q3] What is your favorite season? (select a number)");
+        System.out.println("1. Fall");
+        System.out.println("2. Spring");
+        System.out.println("3. Winter");
+        System.out.println("4. Summer");
+        System.out.println();
+        //Scan for user input and store in response variable
+        RESPONSE_SEASON = responseScanner.next();
+
+        //Check user input and check if user should be awarded points
+        // Award the user 10 points and add response
+        // Award the user 5 points and add response
+        // add response
+        // Award the user 5 points and add response
+        switch (RESPONSE_SEASON) {
+//Fall
+            case "1" -> {
+                totalScore = totalScore + 10;
+                System.out.println("Fall is my favorite too.");
+                System.out.println("You current score is now: " + totalScore);
+                System.out.println();
+            }
+//Spring
+            case "2" -> {
+                totalScore = totalScore + 5;
+                System.out.println("Spring is pretty good.");
+                System.out.println("You current score is now: " + totalScore);
+                System.out.println();
+            }
+//Winter
+            case "3" -> {
+                System.out.println("Winter is my least favorite :(");
+                System.out.println("You current score is now: " + totalScore);
+                System.out.println();
+            }
+//Summer
+            case "4" -> {
+                totalScore = totalScore + 5;
+                System.out.println("Summer is nice, sometimes.");
+                System.out.println("You current score is now: " + totalScore);
+                System.out.println();
+            }
+        }
+
         // Calculate Total Score and Check Friend Compatibility Status
 
         // Random number between the two specified integers for microwave
@@ -82,7 +128,7 @@ public class MightWeBeFriends {
         wait(2000);
         System.out.println("Oh look, the results are in! And.. they are hot.");
 
-        if(totalScore >= 10){
+        if(totalScore >= 30){
             System.out.println("You scored a total of " + totalScore + " points.");
             System.out.println("We would definitely make good friends!");
             System.out.println();
